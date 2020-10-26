@@ -1,6 +1,19 @@
-Merge branch 'master' of https://github.com/jkammau97/CircuitPython
-# Please enter a commit message to explain why this merge is necessary,
-# especially if it merges an updated upstream into a topic branch.
-#
-# Lines starting with '#' will be ignored, and an empty message aborts
-# the commit.
+# CircuitPython
+My circuit python assignments
+
+https://learn.adafruit.com/welcome-to-circuitpython
+
+https://www.markdownguide.org/cheat-sheet/
+
+## Getting Started
+Go to the link above and click the green buttons at the end of the first text box. Read through the tutorial to learn how to boot the Metro 0 and turn it into a F:CIRCUITPY drive
+
+Once it's like that, you need to save ur code file as `code.py` to the board. In order to update the file on Github, put each assignment in github in it's own folder with the file name. 
+
+Ok i need to install lib
+
+search for the `neopixel.mpy`and add it into the lib folder on the metro express.
+
+alrighty I think that's all I need to do. Let's get started w/ the coding! 
+
+
