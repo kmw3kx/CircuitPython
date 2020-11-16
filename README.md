@@ -184,7 +184,34 @@ while True:
 
 Wow, look at those `for` loops. They are very simple. So how it works, I'm guessing, is that the for loop starts the variable `angle` at 0, then increments up by 5 and writes that to the angle portion of the `my_servo` object, so it actually knows what to do with that number. Huh ok then. Well let's run it on the metro then.
 
+ins link to video of it sweeping
 
+My servo is quite shaky, let me try and just have it change positions
+
+```python
+import time
+import board
+import pulseio
+from adafruit_motor import servo
+
+# create a PWMOut object on Pin A2.
+pwm = pulseio.PWMOut(board.A2, duty_cycle=2 ** 15, frequency=50)
+
+# Create a servo object, my_servo.
+my_servo = servo.Servo(pwm)
+
+while True:
+    my_servo.angle = 0
+    time.sleep(.5)
+    my_servo.angle = 10
+    time.sleep(1)
+```
+
+Ok so it's a problem with the code because that worked perfectly 
+
+Let's make it go faster and pause at the end.
+
+After messing with some variables, the settings that ended up working the best were the 
 
 ### Evidence
 
