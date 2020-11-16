@@ -211,7 +211,9 @@ Ok so it's a problem with the code because that worked perfectly
 
 Let's make it go faster and pause at the end.
 
-After messing with some variables, the settings that ended up working the best were the 
+After messing with some variables, the settings that ended up working the best were the time.sleep being .01 and the angle being 5
+
+
 
 ### Evidence
 
