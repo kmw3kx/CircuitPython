@@ -215,6 +215,20 @@ After messing with some variables, the settings that ended up working the best w
 
 
 
+And then capacitive touch is actually pretty simple. A quick Google got me [this code:](#circuitPythonServo/CapacitiveTouch) 
+
+```python
+
+```
+
+I was having trouble with getting all of my `bool`s to actually work properly. I saw that python was a dynamic language, so I didn't have to initialize my variables? Well, I looked it up, and that's wrong. If you don't want a value on the variable, just do this:
+```python
+var = None
+```
+EZ.
+
+Also, it's `True`, `and`, `False`, and `not`, and NOT `true`, `&&`, `false`, and `!`. Syntax matters.
+
 ### Evidence
 
 ### Reflection
