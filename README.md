@@ -276,9 +276,9 @@ Also, it's `True`, `and`, `False`, and `not`, and NOT `true`, `&&`, `false`, and
 
 Here's the wiring diagram. Click on it to go to it.
 
-[<img src="circuitPythonServo\wiring.png" alt="wiring.png" width="" height="">](circuitPythonServo\wiring.png)
+[<img src="circuitPythonServo/wiring.png" alt="wiring.png" width="" height="">](circuitPythonServo/wiring.png)
 
-[<img src="circuitPythonServo\finalCodeWorking.gif" alt="finalCodeWorking.gif" width="" height="">](circuitPythonServo\finalCodeWorking.gif)
+[<img src="circuitPythonServo/finalCodeWorking.gif" alt="finalCodeWorking.gif" width="" height="">](circuitPythonServo/finalCodeWorking.gif)
 
 ### Reflection
 
