@@ -1,3 +1,7 @@
+---
+
+---
+
 # CircuitPython
 My circuit python assignments
 
@@ -32,7 +36,10 @@ search for the `neopixel.mpy`and add it into the lib folder on the metro express
 
 alrighty I think that's all I need to do. Let's get started w/ the coding! 
 
-## Table of Contents
+
+
+# Table of Contents
+
 [Table of Contents](#Table-of-Contents)
 
 * [helloCircuitPython](#helloCircuitPython)
@@ -45,10 +52,17 @@ alrighty I think that's all I need to do. Let's get started w/ the coding!
   * [Process](#Process-1)
   * [Evidence](#Evidence-1)
   * [Reflection](#Reflection-1)
+* [circuitPythonLCD](#circuitPythonLCD)
+  * [Description](#Description-2)
+  * [Process](#Process-2)
+  * [Evidence](#Evidence-2)
+  * [Reflection](#Reflection-2)
 
 
 ## helloCircuitPython
-*[Table of Contents](#Table-of-Contents)*
+*[Back to Table of Contents](#Table-of-Contents)*
+
+**Sub-Table of Contents:**
 
  * [Description](#description)
  * [Process](#Process)
@@ -57,31 +71,36 @@ alrighty I think that's all I need to do. Let's get started w/ the coding!
 
 ### Description
 
-
+*[Back to Sub-Table of Contents](#helloCircuitPython)*
 
 ### Process
+
+*[Back to Sub-Table of Contents](#helloCircuitPython)*
 
 
 ### Evidence
 
-
+*[Back to Sub-Table of Contents](#helloCircuitPython)*
 
 ### Reflection
 
-
+*[Back to Sub-Table of Contents](#helloCircuitPython)*
 
 ---
 
 
 ## circuitPythonServo
-*[Table of Contents](#Table-of-Contents)*
+*[Back to Table of Contents](#Table-of-Contents)*
+
+**Sub-Table of Contents:**
 
   * [Description](#description-1)
   * [Process](#Process-1)
   * [Evidence](#Evidence-1)
   * [Reflection](#Reflection-1)
-### Description
 
+### Description
+*[Back to Sub-Table of Contents](#circuitPythonServo)*
 Now it's time to control a servo with a circuit python
 
 [The Assignment Page](https://cvilleschools.instructure.com/courses/31071/assignments/300471?module_item_id=1016569)
@@ -104,6 +123,8 @@ Big Hint:
 >Make sure you have downloaded the appropriate [Adafruit CircuitPython library bundle](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/)  So, if you're running version 5.x of CircuitPython, grab the 5.x bundle.  Inside the bundle, you'll find a "lib" folder and inside that you'll find an "adafruit_motor" folder.  Inside that, you'll find the "servo.mpy" library.  Copy that file to the lib folder on your Metro and you can use Adafruit's amazing servo object!  In other words, you can say stuff like `myServo.angle = 90` instead of having to figure out PWM communication.
 
 ### Process
+
+*[Back to Sub-Table of Contents](#circuitPythonServo)*
 
 Ok, so first off, I'm gonna approach it like how I would an Arduino:
 
@@ -218,7 +239,29 @@ After messing with some variables, the settings that ended up working the best w
 And then capacitive touch is actually pretty simple. A quick Google got me [this code:](circuitPythonServo/CapacitiveTouch.py) 
 
 ```python
+# Capacitive Touch Code
+# From: https://learn.adafruit.com/adafruit-metro-m0-express-designed-for-circuitpython/circuitpython-cap-touch
+#
+import time
 
+import board
+import touchio
+
+touch_pad_green = board.A0  # Will not work for Circuit Playground Express!
+touch_pad_yellow = board.A1
+# touch_pad = board.A1  # For Circuit Playground Express
+
+touchGreen = touchio.TouchIn(touch_pad_green)
+touchYellow = touchio.TouchIn(touch_pad_yellow)
+
+while True:
+    if touchGreen.value and not(pastGreen):
+        print("Touched Green!")
+    if touchYellow.value and not(pastYellow):
+        print("Touched Yellow!")
+    pastGreen = touchGreen.value
+    pastYellow = touchYellow.value
+    time.sleep(0.05)
 ```
 
 I was having trouble with getting all of my `bool`s to actually work properly. I saw that python was a dynamic language, so I didn't have to initialize my variables? Well, I looked it up, and that's wrong. If you don't want a value on the variable, just do this:
@@ -231,6 +274,50 @@ Also, it's `True`, `and`, `False`, and `not`, and NOT `true`, `&&`, `false`, and
 
 ### Evidence
 
+*[Back to Sub-Table of Contents](#circuitPythonServo)*
+
+[Here's](circuitPythonServo/final1.py) the finalized code. 
+
+Here's the wiring diagram. Click on it to go to it.
+
+[<img src="circuitPythonServo\wiring.png" alt="wiring.png" width="" height="">](circuitPythonServo\wiring.png)
+
+[<img src="circuitPythonServo\finalCodeWorking.gif" alt="finalCodeWorking.gif" width="" height="">](circuitPythonServo\finalCodeWorking.gif)
+
 ### Reflection
 
 ---
+
+*[Back to Sub-Table of Contents](#circuitPythonServo)*
+
+I definitely went all out with this assignment. But also all of the documentation I did should make later projects so easy because I have all of the code I need already. It's also cool how I didn't need to touch the exposed copper for it to register as touched. Cool thing about capacitors, they don't touch, and that's why they have the properties that they do.
+
+-----
+
+## circuitPythonLCD
+
+*[Back to Table of Contents](#Table-of-Contents)*
+
+**Sub-Table of Contents:**
+
+ * [Description](#Description-2)
+* [Process](#Process-2)
+* [Evidence](#Evidence-2)
+* [Reflection](#Reflection-2)
+
+### Description
+
+*[Back to Sub-Table of Contents](#circuitPythonLCD)*
+
+### Process
+
+*[Back to Sub-Table of Contents](#circuitPythonLCD)*
+
+### Evidence
+
+*[Back to Sub-Table of Contents](#circuitPythonLCD)*
+
+### Reflection
+
+*[Back to Sub-Table of Contents](#circuitPythonLCD)*
+
