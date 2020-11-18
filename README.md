@@ -215,7 +215,7 @@ After messing with some variables, the settings that ended up working the best w
 
 
 
-And then capacitive touch is actually pretty simple. A quick Google got me [this code:](#circuitPythonServo/CapacitiveTouch) 
+And then capacitive touch is actually pretty simple. A quick Google got me [this code:](circuitPythonServo/CapacitiveTouch) 
 
 ```python
 
