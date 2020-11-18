@@ -101,7 +101,7 @@ This all means absolutely noting to y'all tho (yet), so I'll jump to the assignm
 
 Big Hint:
 
->Make sure you have downloaded the appropriate [Adafruit CircuitPython library bundle.](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/)  So, if you're running version 5.x of CircuitPython, grab the 5.x bundle.  Inside the bundle, you'll find a "lib" folder and inside that you'll find an "adafruit_motor" folder.  Inside that, you'll find the "servo.mpy" library.  Copy that file to the lib folder on your Metro and you can use Adafruit's amazing servo object!  In other words, you can say stuff like `myServo.angle = 90` instead of having to figure out PWM communication.
+>Make sure you have downloaded the appropriate [Adafruit CircuitPython library bundle](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/)  So, if you're running version 5.x of CircuitPython, grab the 5.x bundle.  Inside the bundle, you'll find a "lib" folder and inside that you'll find an "adafruit_motor" folder.  Inside that, you'll find the "servo.mpy" library.  Copy that file to the lib folder on your Metro and you can use Adafruit's amazing servo object!  In other words, you can say stuff like `myServo.angle = 90` instead of having to figure out PWM communication.
 
 ### Process
 
@@ -143,7 +143,7 @@ It's quite cool what they are doing here. The pin actually cannot be truly analo
 
 Let's see what it looks like on the Metro:
 
-[<img src="circuitPythonServo/PWMTestWLED.GIF" alt="PWMTestWLED.GIF" width="350" height="250">](circuitPythonServo/PWMTestWLED.GIF)
+[<img src="circuitPythonServo/PWMTestWLED.gif" alt="PWMTestWLED.gif" width="350" height="250">](circuitPythonServo/PWMTestWLED.gif)
 
 Sick gif dude
 
