@@ -309,9 +309,36 @@ I definitely went all out with this assignment. But also all of the documentatio
 
 *[Back to Sub-Table of Contents](#circuitPythonLCD)*
 
+> Remember that assignment from Engineering 2 where you wired up an LCD screen, a button, and a switch?  The LCD screen displayed the button press count and the switch determined if you were counting up or down.  Let's see if we can spice that up a little for Engineering 3 using CircuitPython.
+
 ### Process
 
 *[Back to Sub-Table of Contents](#circuitPythonLCD)*
+
+First, to get the LCD wired up and working.
+
+The wiring is made easy due to the LCD Backpack: GND to GND, VCC to 5V, SDA to SDA, and SCL to SCL.
+
+Go [here](https://cvilleschools.instructure.com/courses/31071/assignments/303469) to the assignment page on canvas for the libraries to put in your metro.
+
+And with that all squared away, the [following code](circuitPythonLCD/LCDTestCode.py) should work:
+
+```python
+from lcd.lcd import LCD
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+# some LCDs are 0x3f... some are 0x27.
+lcd = LCD(I2CPCF8574Interface(0x3f), num_rows=2, num_cols=16)
+
+lcd.print("Hello, Engineer!")
+```
+And here's it working:
+[<img src="circuitPythonLCD/LCDTestWorking.JPG" alt="LCDTestWorking.JPG" width="" height="">](circuitPythonLCD/LCDTestWorking.JPG)
+
+Alright, let's now work in a button or two!!
+
+The LCD functions are different this time around: it's `lcd.set_cursor_pos(y[0-1],x[0-15])` instead of `lcd.set`
+
+
 
 ### Evidence
 
