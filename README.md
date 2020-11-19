@@ -21,19 +21,6 @@ while True:
      print("Cyan")
      time.sleep(0.5)
 ```
-## Getting Started
-Go to the link above and click the green buttons at the end of the first text box. Read through the tutorial to learn how to boot the Metro 0 and turn it into a F:CIRCUITPY drive
-
-Once it's like that, you need to save ur code file as `code.py` to the board. In order to update the file on Github, put each assignment in github in it's own folder with the file name. 
-
-Ok i need to install lib
-
-search for the `neopixel.mpy`and add it into the lib folder on the metro express.
-
-alrighty I think that's all I need to do. Let's get started w/ the coding! 
-
-
-
 # Table of Contents
 
 [Table of Contents](#Table-of-Contents)
@@ -69,18 +56,49 @@ alrighty I think that's all I need to do. Let's get started w/ the coding!
 
 *[Back to Sub-Table of Contents](#helloCircuitPython)*
 
+> This year, we are going to be programming Metro Express boards using CircuitPython.
+
 ### Process
 
 *[Back to Sub-Table of Contents](#helloCircuitPython)*
 
 
+Go to the link above and click the green buttons at the end of the first text box. Read through the tutorial to learn how to boot the Metro 0 and turn it into a F:CIRCUITPY drive
+
+Once it's like that, you need to save ur code file as `code.py` to the board. In order to update the file on Github, put each assignment in github in it's own folder with the file name. 
+
+Ok i need to install lib
+
+search for the `neopixel.mpy`and add it into the lib folder on the metro express.
+
+alrighty I think that's all I need to do. Let's get started w/ the coding! 
+
+Install [Mu](https://codewith.mu/en/download), and also I like using [Typora](https://typora.io/) for editing my readme locally.
+
+And just upload the code in the assignment page.
+
 ### Evidence
 
 *[Back to Sub-Table of Contents](#helloCircuitPython)*
 
+We are literally given the code and there is no wiring. So take it on faith that if I got the next assignment done, I got this one done as well ;)
+
+```python
+import board
+import neopixel
+
+dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
+
+print("Make it red!")
+
+while True:
+     dot.fill((255,0,0))
+```
 ### Reflection
 
 *[Back to Sub-Table of Contents](#helloCircuitPython)*
+
+I quite like how the metro express loads like a flash drive that you just save files too. Python is also just way more streamlined than arduino.
 
 ---
 
