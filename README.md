@@ -1,10 +1,7 @@
 # CircuitPython
 My circuit python assignments
 
-https://learn.adafruit.com/welcome-to-circuitpython
-
-https://www.markdownguide.org/cheat-sheet/
-
+[Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet/)
 
 > blockquote
 
@@ -12,14 +9,6 @@ https://www.markdownguide.org/cheat-sheet/
 
 ```python
 code block here
-
-while True:
-     dot.fill((5,0,0))
-     print("RED")
-     time.sleep(0.5)
-     dot.fill((0,5,10))
-     print("Cyan")
-     time.sleep(0.5)
 ```
 # Table of Contents
 
@@ -63,9 +52,9 @@ while True:
 *[Back to Sub-Table of Contents](#helloCircuitPython)*
 
 
-Go to the link above and click the green buttons at the end of the first text box. Read through the tutorial to learn how to boot the Metro 0 and turn it into a F:CIRCUITPY drive
+Go to [this link](https://learn.adafruit.com/welcome-to-circuitpython) and click the green buttons at the end of the first text box. Read through the tutorial to learn how to boot the Metro 0 and turn it into a F:CIRCUITPY drive
 
-Once it's like that, you need to save ur code file as `code.py` to the board. In order to update the file on Github, put each assignment in github in it's own folder with the file name. 
+Once it's like that, you need to save ur code file as `main.py` to the board. In order to update the file on Github, put each assignment in github in it's own folder with the file name. 
 
 Ok i need to install lib
 
@@ -94,6 +83,7 @@ print("Make it red!")
 while True:
      dot.fill((255,0,0))
 ```
+
 ### Reflection
 
 *[Back to Sub-Table of Contents](#helloCircuitPython)*
@@ -320,6 +310,8 @@ I definitely went all out with this assignment. But also all of the documentatio
 * [Reflection](#Reflection-2)
 
 ### Description
+
+WIP
 
 *[Back to Sub-Table of Contents](#circuitPythonLCD)*
 
