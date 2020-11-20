@@ -180,7 +180,7 @@ Actually, I'm gonna slow down the cycle speed first
 
 Well that was a waste; it doesn't work. Let's try something else.
 
-#Actually Getting the Servo Working
+#### Actually Getting the Servo Working
 
 So we're going somewhere else entirely! [Here's the rad Adafruit page I found.](https://learn.adafruit.com/adafruit-metro-m0-express-designed-for-circuitpython/circuitpython-servo)
 
