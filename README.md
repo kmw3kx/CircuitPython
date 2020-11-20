@@ -130,6 +130,8 @@ Big Hint:
 
 *[Back to Sub-Table of Contents](#circuitPythonServo)*
 
+***Note:*** *This describes how I went about doing the assignment. There's a segment where I'm trying to get an LED to fade, because I thought it'd also work to make the servo sweep. If you want to skip to where I actually start getting the servo to sweep, click [here.](#Actually-Getting-the-Servo-Working) However reading the other stuff might be helpful, It's not necessary for the assignment.*
+
 Ok, so first off, I'm gonna approach it like how I would an Arduino:
 
 1. I need to figure out how to 'attach' the servo to a pin
@@ -176,9 +178,9 @@ I think it'll just work if I now plug in the servo
 
 Actually, I'm gonna slow down the cycle speed first
 
+Well that was a waste; it doesn't work. Let's try something else.
 
-
-Ok and so it doesn't work. Let's try something else
+#Actually Getting the Servo Working
 
 So we're going somewhere else entirely! [Here's the rad Adafruit page I found.](https://learn.adafruit.com/adafruit-metro-m0-express-designed-for-circuitpython/circuitpython-servo)
 
@@ -208,8 +210,6 @@ while True:
 ```
 
 Wow, look at those `for` loops. They are very simple. So how it works, I'm guessing, is that the for loop starts the variable `angle` at 0, then increments up by 5 and writes that to the angle portion of the `my_servo` object, so it actually knows what to do with that number. Huh ok then. Well let's run it on the metro then.
-
-ins link to video of it sweeping
 
 My servo is quite shaky, let me try and just have it change positions
 
