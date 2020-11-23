@@ -1,10 +1,7 @@
 # CircuitPython
 My circuit python assignments
 
-https://learn.adafruit.com/welcome-to-circuitpython
-
-https://www.markdownguide.org/cheat-sheet/
-
+[Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet/)
 
 > blockquote
 
@@ -12,14 +9,6 @@ https://www.markdownguide.org/cheat-sheet/
 
 ```python
 code block here
-
-while True:
-     dot.fill((5,0,0))
-     print("RED")
-     time.sleep(0.5)
-     dot.fill((0,5,10))
-     print("Cyan")
-     time.sleep(0.5)
 ```
 # Table of Contents
 
@@ -63,9 +52,9 @@ while True:
 *[Back to Sub-Table of Contents](#helloCircuitPython)*
 
 
-Go to the link above and click the green buttons at the end of the first text box. Read through the tutorial to learn how to boot the Metro 0 and turn it into a F:CIRCUITPY drive
+Go to [this link](https://learn.adafruit.com/welcome-to-circuitpython) and click the green buttons at the end of the first text box. Read through the tutorial to learn how to boot the Metro 0 and turn it into a F:CIRCUITPY drive
 
-Once it's like that, you need to save ur code file as `code.py` to the board. In order to update the file on Github, put each assignment in github in it's own folder with the file name. 
+Once it's like that, you need to save ur code file as `main.py` to the board. In order to update the file on Github, put each assignment in github in it's own folder with the file name. 
 
 Ok i need to install lib
 
@@ -94,6 +83,7 @@ print("Make it red!")
 while True:
      dot.fill((255,0,0))
 ```
+
 ### Reflection
 
 *[Back to Sub-Table of Contents](#helloCircuitPython)*
@@ -139,6 +129,8 @@ Big Hint:
 ### Process
 
 *[Back to Sub-Table of Contents](#circuitPythonServo)*
+
+***Note:*** *This describes how I went about doing the assignment. There's a segment where I'm trying to get an LED to fade, because I thought it'd also work to make the servo sweep. If you want to skip to where I actually start getting the servo to sweep, click [here.](#Actually-Getting-the-Servo-Working) However reading the other stuff might be helpful, It's not necessary for the assignment.*
 
 Ok, so first off, I'm gonna approach it like how I would an Arduino:
 
@@ -186,9 +178,9 @@ I think it'll just work if I now plug in the servo
 
 Actually, I'm gonna slow down the cycle speed first
 
+Well that was a waste; it doesn't work. Let's try something else.
 
-
-Ok and so it doesn't work. Let's try something else
+#### Actually Getting the Servo Working
 
 So we're going somewhere else entirely! [Here's the rad Adafruit page I found.](https://learn.adafruit.com/adafruit-metro-m0-express-designed-for-circuitpython/circuitpython-servo)
 
@@ -218,8 +210,6 @@ while True:
 ```
 
 Wow, look at those `for` loops. They are very simple. So how it works, I'm guessing, is that the for loop starts the variable `angle` at 0, then increments up by 5 and writes that to the angle portion of the `my_servo` object, so it actually knows what to do with that number. Huh ok then. Well let's run it on the metro then.
-
-ins link to video of it sweeping
 
 My servo is quite shaky, let me try and just have it change positions
 
@@ -320,6 +310,8 @@ I definitely went all out with this assignment. But also all of the documentatio
 * [Reflection](#Reflection-2)
 
 ### Description
+
+WIP
 
 *[Back to Sub-Table of Contents](#circuitPythonLCD)*
 
