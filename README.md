@@ -344,7 +344,26 @@ Alright, let's now work in a button or two!!
 
 The LCD functions are different this time around: it's `lcd.set_cursor_pos(y[0-1],x[0-15])` instead of `lcd.set`
 
+Ok so now we're running into a memory issue. The circuit python can only hold so much stuff at a time, so we need to make sure we're saving as much space as possible. Mr. H said to delete any libraries that we are not using off of the circuit python. I forsee that becoming an issue when I have to go back and find any of the libraries I included and making sure they're all updated... oh well.  I guess I can always just google search for them.
 
+Still having memory issues? Apparently you have to convert the files, but that seems to be a massive pain to do. Once I have the library folders, I'll link them here.
+
+Until then, let's limit the amount of characters we're printing to the LCD.
+
+And now another error that I not understand. YAY
+
+```
+Traceback (most recent call last):
+  File "main.py", line 15, in <module>
+  File "/lib/lcd/i2c_pcf8574_interface.py", line 52, in __init__
+RuntimeError: SDA or SCL needs a pull up
+```
+
+...It just wasn't plugged in lol
+
+Ok back to memory problems ugh
+
+My fix was inspired by [Alden](https://github.com/adent11/CircuitPython#CircuitPython-LCD), and it was that I need to limit the number of different characters that I'm uploading to the LCD. I had a "Hello Engineer!" on startup; I'm guessing that was the cause of things not working.
 
 ### Evidence
 
