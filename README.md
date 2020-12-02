@@ -369,7 +369,17 @@ My fix was inspired by [Alden](https://github.com/adent11/CircuitPython#CircuitP
 
 *[Back to Sub-Table of Contents](#circuitPythonLCD)*
 
+Wiring (borrowed from [adent11](https://github.com/adent11/CircuitPython#wiring-1))
+
+[<img src="circuitPythonLCD/CircuitPythonLCDWiring.PNG" alt="CircuitPythonLCDWiring.png" width="" height="400">](https://github.com/adent11/CircuitPython/blob/master/Media/CircuitPythonLCDWiring.png)
+
+[Here's](circuitPythonLCD/main.py) the finalized code. 
+
 ### Reflection
 
 *[Back to Sub-Table of Contents](#circuitPythonLCD)*
+
+I had a good amount of trouble with this assignment. I still need to figure out how to get those libraries smaller so I can print more characters. I will get to that now.
+
+The lib folder is in the repo now. `lcd` and `adafruit_bus_device`
 
