@@ -371,7 +371,7 @@ My fix was inspired by [Alden](https://github.com/adent11/CircuitPython#CircuitP
 
 Wiring (borrowed from [adent11](https://github.com/adent11/CircuitPython#wiring-1))
 
-[<img src="circuitPythonLCD/CircuitPythonLCDWiring.PNG" alt="CircuitPythonLCDWiring.png" width="" height="400">](https://github.com/adent11/CircuitPython/blob/master/Media/CircuitPythonLCDWiring.png)
+[<img src="circuitPythonLCD/CircuitPythonLCDWiring.png" alt="CircuitPythonLCDWiring.png" width="" height="400">](https://github.com/adent11/CircuitPython/blob/master/Media/CircuitPythonLCDWiring.png)
 
 [Here's](circuitPythonLCD/main.py) the finalized code. 
 
