@@ -19,16 +19,37 @@ code block here
   * [Process](#Process)
   * [Evidence](#Evidence)
   * [Reflection](#Reflection)
+  
 * [circuitPythonServo](#circuitPythonServo)
   * [Description](#Description-1)
   * [Process](#Process-1)
   * [Evidence](#Evidence-1)
   * [Reflection](#Reflection-1)
+  
 * [circuitPythonLCD](#circuitPythonLCD)
+  
   * [Description](#Description-2)
   * [Process](#Process-2)
   * [Evidence](#Evidence-2)
   * [Reflection](#Reflection-2)
+  
+* [circuitPythonPhotointerrupters](#circuitPythonPhotointerrupters)
+
+  * [Description](#Description-3)
+  * [Process](#Process-3)
+  * [Evidence](#Evidence-3)
+  * [Reflection](#Reflection-3)
+
+* [circuitPythonDistanceSensor](#circuitPythonDistanceSensor)
+
+  * [Description](#Description-4)
+  * [Process](#Process-4)
+  * [Evidence](#Evidence-4)
+  * [Reflection](#Reflection-4)
+
+  
+
+  
 
 
 ## helloCircuitPython
@@ -311,8 +332,6 @@ I definitely went all out with this assignment. But also all of the documentatio
 
 ### Description
 
-WIP
-
 *[Back to Sub-Table of Contents](#circuitPythonLCD)*
 
 > Remember that assignment from Engineering 2 where you wired up an LCD screen, a button, and a switch?  The LCD screen displayed the button press count and the switch determined if you were counting up or down.  Let's see if we can spice that up a little for Engineering 3 using CircuitPython.
@@ -383,3 +402,87 @@ I had a good amount of trouble with this assignment. I still need to figure out 
 
 The lib folder is in the repo now. `lcd` and `adafruit_bus_device`
 
+## circuitPythonPhotointerrupters
+
+*[Back to Table of Contents](#Table-of-Contents)*
+
+WIP
+
+**Sub-Table of Contents:**
+
+ * [Description](#Description-3)
+* [Process](#Process-3)
+* [Evidence](#Evidence-3)
+* [Reflection](#Reflection-3)
+
+### Description
+
+*[Back to Sub-Table of Contents](#circuitPythonPhotointerrupters)*
+
+> - Wire up your photointerrupter and have it keep track of how many times it has been interrupted.
+> - Your program outputs the count using a full sentence like "The number of interrupts is: ___" or "I have been interrupted ___ times."
+> - The program outputs the sentence every 4 seconds.
+> - Don't use `sleep(). `
+> - Use [`time.monotonic()`](https://learn.adafruit.com/arduino-to-circuitpython/time). 
+>
+> For your submission, if you have an LCD working, you can just take a video of you interrupting and then show the LCD. Otherwise, you'll need to take a screenshot as well, and upload that too.
+
+### Process
+
+*[Back to Sub-Table of Contents](#circuitPythonPhotointerrupters)*
+
+> In your code, you want to use a digital IO pin, make it an input, and "pull it up." Your Metro Express has an internal resistor to do that for you, so you can do it all via code and without any extra resistors. Pretty cool. When you do that, the input pin will be held at logic voltage (high; 5 V) until something interrupts your photo interrupter. Then you can detect it going low.
+
+Found [this handy page](https://learn.adafruit.com/arduino-to-circuitpython/digital-in-out) with this code to do that:
+
+```python
+import digitalio
+import board
+photoPin = digitalio.DigitalInOut(board.D5)
+photoPin.direction = digitalio.Direction.INPUT
+photoPin.pull = digitalio.Pull.UP
+```
+
+And for [`time.monotonic()`](https://learn.adafruit.com/arduino-to-circuitpython/time):
+
+```python
+import time
+now = time.monotonic()
+```
+
+### Evidence
+
+*[Back to Sub-Table of Contents](#circuitPythonPhotointerrupters)*
+
+### Reflection
+
+*[Back to Sub-Table of Contents](#circuitPythonPhotointerrupters)*
+
+## circuitPythonDistanceSensor
+
+*[Back to Table of Contents](#Table-of-Contents)*
+
+WIP
+
+**Sub-Table of Contents:**
+
+ * [Description](#Description-4)
+* [Process](#Process-4)
+* [Evidence](#Evidence-4)
+* [Reflection](#Reflection-4)
+
+### Description
+
+*[Back to Sub-Table of Contents](#circuitPythonDistanceSensor)*
+
+### Process
+
+*[Back to Sub-Table of Contents](#circuitPythonDistanceSensor)*
+
+### Evidence
+
+*[Back to Sub-Table of Contents](#circuitPythonDistanceSensor)*
+
+### Reflection
+
+*[Back to Sub-Table of Contents](#circuitPythonDistanceSensor)*
