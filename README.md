@@ -454,9 +454,17 @@ now = time.monotonic()
 
 *[Back to Sub-Table of Contents](#circuitPythonPhotointerrupters)*
 
+Wiring 
+
+[<img src="circuitPythonPhotointerrupters/wiring.png" alt="wiring.png" width="" height="400">](circuitPythonPhotointerrupters/wiring.png)
+
+[Here's](circuitPythonPhotointerrupters/main.py) the finalized code. 
+
 ### Reflection
 
 *[Back to Sub-Table of Contents](#circuitPythonPhotointerrupters)*
+
+Nice and EZ.
 
 ## circuitPythonDistanceSensor
 
@@ -475,9 +483,39 @@ WIP
 
 *[Back to Sub-Table of Contents](#circuitPythonDistanceSensor)*
 
+> Hint: you only need to add [this one file](https://github.com/adafruit/Adafruit_CircuitPython_HCSR04/blob/master/adafruit_hcsr04.py) to the lib folder on your Metro.
+>
+> **The assignment:** 
+
+> - The HC-SR04 measures the distance to an object roughly 10 times per second.
+> - The distance is printed out to your serial monitor in cm.
+> - The color of the onboard neopixel on your Metro corresponds to the distance, according to the graphic below.
+> - Neopixel should either stay red when below 5cm, and green when above 35cm, or just turn it off.
+
 ### Process
 
 *[Back to Sub-Table of Contents](#circuitPythonDistanceSensor)*
+
+[Thank you, Adafruit for this webpage](https://learn.adafruit.com/ultrasonic-sonar-distance-sensors/python-circuitpython)
+
+And here's the code to get it all running:
+
+```python
+import time
+import board
+import adafruit_hcsr04
+ 
+sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D5, echo_pin=board.D6)
+ 
+while True:
+    try:
+        print((sonar.distance,))
+    except RuntimeError:
+        print("Retrying!")
+    time.sleep(0.1)
+```
+
+
 
 ### Evidence
 
