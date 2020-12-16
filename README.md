@@ -75,13 +75,13 @@ code block here
 
 Go to [this link](https://learn.adafruit.com/welcome-to-circuitpython) and click the green buttons at the end of the first text box. Read through the tutorial to learn how to boot the Metro 0 and turn it into a F:CIRCUITPY drive
 
-Once it's like that, you need to save ur code file as `main.py` to the board. In order to update the file on Github, put each assignment in github in it's own folder with the file name. 
+Once it's like that, you need to save ur code file as `main.py` to the board. In order to update the file on Github, put each assignment in github in it's own folder with the file name.
 
 Ok i need to install lib
 
 search for the `neopixel.mpy`and add it into the lib folder on the metro express.
 
-alrighty I think that's all I need to do. Let's get started w/ the coding! 
+alrighty I think that's all I need to do. Let's get started w/ the coding!
 
 Install [Mu](https://codewith.mu/en/download), and also I like using [Typora](https://typora.io/) for editing my readme locally.
 
@@ -141,7 +141,7 @@ This all means absolutely noting to y'all tho (yet), so I'll jump to the assignm
 >
 >I don't expect you know know how to program capacitive touch on your Metro.  That's what Google is for.  But please don't Google "how to make a servo move using capacitive touch."  I hope you will improve your Google-fu in this class.  Break down what you need to know.  Maybe start with "Metro express capacitive touch" , or "CircuitPython capacitive touch" or something like that.
 >
->When you're done, upload your code, document your work in your repo README, and submit your repo URL.  Additionally, you should upload a short video to Canvas, showing the thing working.  Use the record option when submitting, it's really easy. 
+>When you're done, upload your code, document your work in your repo README, and submit your repo URL.  Additionally, you should upload a short video to Canvas, showing the thing working.  Use the record option when submitting, it's really easy.
 
 Big Hint:
 
@@ -187,7 +187,7 @@ while True:
         time.sleep(0.01)
 ```
 
-It's quite cool what they are doing here. The pin actually cannot be truly analog, so they use PWM to make it appear analog. 
+It's quite cool what they are doing here. The pin actually cannot be truly analog, so they use PWM to make it appear analog.
 
 Let's see what it looks like on the Metro:
 
@@ -220,7 +220,7 @@ pwm = pulseio.PWMOut(board.A2, duty_cycle=2 ** 15, frequency=50)
 my_servo = servo.Servo(pwm)
  
 while True:
-    for angle in range(0, 180, 5):  
+    for angle in range(0, 180, 5):
         # 0 - 180 degrees, 5 degrees at a time.
         my_servo.angle = angle
         time.sleep(0.05)
@@ -253,7 +253,7 @@ while True:
     time.sleep(1)
 ```
 
-Ok so it's a problem with the code because that worked perfectly 
+Ok so it's a problem with the code because that worked perfectly
 
 Let's make it go faster and pause at the end.
 
@@ -261,7 +261,7 @@ After messing with some variables, the settings that ended up working the best w
 
 
 
-And then capacitive touch is actually pretty simple. A quick Google got me [this code:](circuitPythonServo/CapacitiveTouch.py) 
+And then capacitive touch is actually pretty simple. A quick Google got me [this code:](circuitPythonServo/CapacitiveTouch.py)
 
 ```python
 # Capacitive Touch Code
@@ -301,7 +301,7 @@ Also, it's `True`, `and`, `False`, and `not`, and NOT `true`, `&&`, `false`, and
 
 *[Back to Sub-Table of Contents](#circuitPythonServo)*
 
-[Here's](circuitPythonServo/final1.py) the finalized code. 
+[Here's](circuitPythonServo/final1.py) the finalized code.
 
 Here's the wiring diagram. Click on it to go to it.
 
@@ -392,7 +392,7 @@ Wiring (borrowed from [adent11](https://github.com/adent11/CircuitPython#wiring-
 
 [<img src="circuitPythonLCD/CircuitPythonLCDWiring.png" alt="CircuitPythonLCDWiring.png" width="" height="400">](https://github.com/adent11/CircuitPython/blob/master/Media/CircuitPythonLCDWiring.png)
 
-[Here's](circuitPythonLCD/main.py) the finalized code. 
+[Here's](circuitPythonLCD/main.py) the finalized code.
 
 ### Reflection
 
@@ -423,7 +423,7 @@ WIP
 > - Your program outputs the count using a full sentence like "The number of interrupts is: ___" or "I have been interrupted ___ times."
 > - The program outputs the sentence every 4 seconds.
 > - Don't use `sleep(). `
-> - Use [`time.monotonic()`](https://learn.adafruit.com/arduino-to-circuitpython/time). 
+> - Use [`time.monotonic()`](https://learn.adafruit.com/arduino-to-circuitpython/time).
 >
 > For your submission, if you have an LCD working, you can just take a video of you interrupting and then show the LCD. Otherwise, you'll need to take a screenshot as well, and upload that too.
 
@@ -454,11 +454,11 @@ now = time.monotonic()
 
 *[Back to Sub-Table of Contents](#circuitPythonPhotointerrupters)*
 
-Wiring 
+Wiring
 
 [<img src="circuitPythonPhotointerrupters/wiring.png" alt="wiring.png" width="" height="400">](circuitPythonPhotointerrupters/wiring.png)
 
-[Here's](circuitPythonPhotointerrupters/main.py) the finalized code. 
+[Here's](circuitPythonPhotointerrupters/main.py) the finalized code.
 
 ### Reflection
 
@@ -485,7 +485,7 @@ WIP
 
 > Hint: you only need to add [this one file](https://github.com/adafruit/Adafruit_CircuitPython_HCSR04/blob/master/adafruit_hcsr04.py) to the lib folder on your Metro.
 >
-> **The assignment:** 
+> **The assignment:**
 
 > - The HC-SR04 measures the distance to an object roughly 10 times per second.
 > - The distance is printed out to your serial monitor in cm.
@@ -514,9 +514,42 @@ while True:
         print("Retrying!")
     time.sleep(0.1)
 ```
+Once I got a replacement for my `hcdr04`, I was ready to tackle the harder coding for the project
 
+Let's start by making the input from the sensor more stable. For that, we need to record what it is for a certain number of times, and then takes the median of it, and returns that as the input length.
 
+I'll include all of the websites I found where I did my read ups
 
+First, [Geeks for Geeks](https://www.geeksforgeeks.org/find-median-of-list-in-python/) gave me this code:
+```python
+# Python3 code to demonstrate working of
+# Median of list
+# Using loop + "~" operator
+
+# initializing list
+test_list = [4, 5, 8, 9, 10, 17]
+
+# printing list
+print("The original list : " + str(test_list))
+
+# Median of list
+# Using loop + "~" operator
+test_list.sort()
+mid = len(test_list) // 2
+res = (test_list[mid] + test_list[~mid]) / 2
+
+# Printing result
+print("Median of list is : " + str(res))
+```
+But, if you don't know how python does arrays (hint: they don't have arrays), do some reading up on these:
+[Python Arrays](https://www.w3schools.com/python/python_arrays.asp)
+[Python List Methods](https://www.w3schools.com/python/python_lists_methods.asp)
+[Python lists](https://www.w3schools.com/python/python_lists.asp)
+In short, Python doesn't do arrays; but there are 4 different types of objects that are extremely similar. The one I'll be using is lists.
+
+```python
+
+```
 ### Evidence
 
 *[Back to Sub-Table of Contents](#circuitPythonDistanceSensor)*
